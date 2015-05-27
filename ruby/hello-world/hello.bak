@@ -1,0 +1,16 @@
+class HelloWorld
+   def initialize(name = "World")
+      @name = name.capitalize
+   end
+   def hello
+      puts "Hello #{@name}!"
+   end
+end
+
+if ARGV.length < 1
+  say = HelloWorld.new()
+else
+  say = HelloWorld.new("#{ARGV[0]}")
+end
+  
+say.hello

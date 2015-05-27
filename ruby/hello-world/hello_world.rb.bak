@@ -1,0 +1,20 @@
+class HelloWorld
+  def hello(name = "world")
+#    puts true ? "true" : "false"
+    puts "Hello #{name}!"
+    
+#    a = param ? !param.nil : "world" 
+#    puts "Hello, #{a}!"
+  end
+end
+
+#a = (ARGV[0])
+if ARGV.length < 1
+  HelloWorld.hello
+  puts ARGV.length
+elsif ARGV.length >= 1
+  HelloWorld.hello(ARGV[0])
+  puts ARGV.length
+end
+
+#elloWorld.hello("#{a}")
