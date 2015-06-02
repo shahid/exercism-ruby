@@ -4,17 +4,11 @@ class Squares
   end
 
   def square_of_sums
-    sum = 0
-    (1..@num).each do | n |
-      sum+=n
-    end
-    return sum ** 2
+    ((1..@num).reduce(:+)) ** 2
   end
  
   def sum_of_squares
-    sum = 0
-    ((1..@num).map {|n| n ** 2}).each { |a| sum+=a }
-    return sum
+    (1..@num).inject (0) {|sum, n| sum + (n ** 2) }
   end
 
   def difference
