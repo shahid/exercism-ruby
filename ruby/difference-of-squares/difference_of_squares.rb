@@ -6,7 +6,7 @@ class Squares
   def square_of_sums
     ((1..@num).reduce(:+)) ** 2
   end
- 
+
   def sum_of_squares
     (1..@num).inject (0) {|sum, n| sum + (n ** 2) }
   end
